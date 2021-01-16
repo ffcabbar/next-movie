@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "./Layout.module.scss";
 import Header from "../Header/Header.js";
 import Image from "../Image/Image.js";
+import FloatingFilterBox from "../FloatingFilterBox/FloatingFilterBox.js";
 
 const Layout = ({ children }) => {
   return (
@@ -11,8 +12,10 @@ const Layout = ({ children }) => {
         <title>Next Movie</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <Header />
       <Image />
+      <FloatingFilterBox />
       
       <main className={styles.main}>{children}</main>
 
