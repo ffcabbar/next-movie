@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --color-primary: #f5c518;
+  --color-secondary: #fffdf5;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-paragraph: rgba(0, 0, 0, 0.5);
+  --color-gray-100: #fafafa;
+  --color-gray-200: #f3f3f3;
+  --color-gray-300: #a4a4a4;
+  --color-gray-400: #636363;
+}
