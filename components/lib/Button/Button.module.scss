@@ -1,0 +1,76 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(#f5c518, 0.3);
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-300);
+  }
+
+  span {
+    margin-bottom: -4px;
+  }
+}
+
+.buttonXs {
+  height: 1.5rem;
+  min-width: 1.5rem;
+  font-size: 0.75rem;
+}
+.buttonSm {
+  height: 2rem;
+  min-width: 2rem;
+  font-size: 0.875rem;
+}
+.buttonMd {
+  height: 2.5rem;
+  min-width: 2.5rem;
+  font-size: 1rem;
+}
+.buttonLg {
+  height: 3rem;
+  min-width: 3rem;
+  font-size: 1.125rem;
+}
+
+.buttonSolid {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover {
+    background: darken(#f5c518, 5%);
+    transform: translateY(-2px);
+  }
+}
+.buttonOutline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+
+  &:hover {
+    background: lighten(#f5c518, 45%);
+    transform: translateY(-2px);
+  }
+}
+.buttonGhost {
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+  box-shadow: none;
+
+  &:hover {
+    background: lighten(#f5c518, 40%);
+    transform: translateY(-2px);
+  }
+}
