@@ -13,7 +13,7 @@ export interface IButtonProps
 }
 
 type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
-type ButtonVariant = 'solid' | 'outline' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 
 export const Button: React.FC<IButtonProps> = (props) => {
   const {
@@ -21,7 +21,7 @@ export const Button: React.FC<IButtonProps> = (props) => {
     style,
     className,
     size = 'md',
-    variant = 'solid',
+    variant = 'primary',
     leftIcon,
     rightIcon,
     ...rest
@@ -46,8 +46,10 @@ export const Button: React.FC<IButtonProps> = (props) => {
   }
 
   let buttonVariant;
-  if (variant === 'solid') {
-    buttonVariant = styles.buttonSolid;
+  if (variant === 'primary') {
+    buttonVariant = styles.buttonPrimary;
+  } else if (variant === 'secondary') {
+    buttonVariant = styles.buttonSecondary;
   } else if (variant === 'outline') {
     buttonVariant = styles.buttonOutline;
   } else if (variant === 'ghost') {

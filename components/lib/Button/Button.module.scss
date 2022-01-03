@@ -7,7 +7,7 @@
   border: none;
   padding: 0 1rem;
   border-radius: 4px;
-  box-shadow: 0 2px 8px 0 rgba(#f5c518, 0.3);
+  // box-shadow: 0 2px 8px 0 rgba(#f5c518, 0.3);
   cursor: pointer;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
@@ -45,16 +45,6 @@
   min-width: 3rem;
   font-size: 1.125rem;
 }
-
-.buttonSolid {
-  background: var(--color-primary);
-  color: var(--color-white);
-
-  &:hover {
-    background: darken(#f5c518, 5%);
-    transform: translateY(-2px);
-  }
-}
 .buttonOutline {
   background: transparent;
   color: var(--color-primary);
@@ -63,6 +53,14 @@
   &:hover {
     background: lighten(#f5c518, 45%);
     transform: translateY(-2px);
+  }
+
+  span {
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
   }
 }
 .buttonGhost {
@@ -74,5 +72,46 @@
   &:hover {
     background: lighten(#f5c518, 40%);
     transform: translateY(-2px);
+  }
+
+  span {
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
+  }
+}
+.buttonPrimary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  &:hover {
+    background: darken(#f5c518, 5%);
+    transform: translateY(-2px);
+  }
+
+  span {
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.buttonSecondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  &:hover {
+    background: lighten(#f5c518, 35%);
+    transform: translateY(-2px);
+  }
+
+  span {
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
   }
 }
