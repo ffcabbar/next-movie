@@ -6,9 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write .",
+    "format": "prettier --write",
     "prepare": "husky install",
-    "pre-commit": "yarn format && yarn lint && git add ."
+    "pre-commit": "lint-staged --allow-empty"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -22,8 +22,15 @@
     "@types/react": "17.0.38",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.5",
     "prettier": "2.5.1",
-    "typescript": "4.5.4",
-    "husky": "^7.0.0"
+    "typescript": "4.5.4"
+  },
+  "lint-staged": {
+    "./**/*.{ts,tsx,js}": [
+      "yarn format",
+      "yarn eslint --max-warnings=0"
+    ]
   }
 }
