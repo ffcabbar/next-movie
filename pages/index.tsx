@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Button } from '../components/lib/Button/Button';
+import { Input } from '../components/lib/Input/Input';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
       >
         Button
       </Button>
+      <Input />
     </div>
   );
 };
