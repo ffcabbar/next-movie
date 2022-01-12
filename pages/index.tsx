@@ -43,7 +43,7 @@ const Home: NextPage = () => {
       >
         Button
       </Button>
-      <Input />
+      <Input placeholder="lorem ipsum" />
     </div>
   );
 };
