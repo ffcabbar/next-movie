@@ -3,26 +3,29 @@ import cn from 'classnames';
 import styles from './Input.module.scss';
 
 export interface IInputProps
-  extends React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
+  extends Omit<
+    React.DetailedHTMLProps<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      HTMLInputElement
+    >,
+    'size'
   > {
-  sizeOfInput?: InputSize;
+  size?: InputSize;
 }
 
 type InputSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export const Input: React.FC<IInputProps> = (props) => {
-  const { style, className, sizeOfInput = 'md', ...rest } = props;
+  const { style, className, size = 'md', ...rest } = props;
 
   let _style: React.CSSProperties = style || {};
 
   let inputSize;
-  if (sizeOfInput === 'xs') {
+  if (size === 'xs') {
     inputSize = styles.inputXs;
-  } else if (sizeOfInput === 'sm') {
+  } else if (size === 'sm') {
     inputSize = styles.inputSm;
-  } else if (sizeOfInput === 'md') {
+  } else if (size === 'md') {
     inputSize = styles.inputMd;
   } else {
     inputSize = styles.inputLg;
