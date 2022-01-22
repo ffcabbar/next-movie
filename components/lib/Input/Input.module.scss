@@ -73,3 +73,10 @@
     }
   }
 }
+.hover {
+  transition: box-shadow 0.2s cubic-bezier(0.2, 0.8, 0.4, 1);
+  &:hover {
+    box-shadow: 0 0 1px 0 rgb(189 192 207 / 6%),
+      0 0 10px 0 rgb(189 192 207 / 40%);
+  }
+}

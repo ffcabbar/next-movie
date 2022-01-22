@@ -5,6 +5,7 @@ import styles from './Input.module.scss';
 export interface IInputProps extends Omit<A, 'size'> {
   size?: InputSize;
   icon?: React.ReactElement;
+  hover?: boolean;
 }
 
 type A = React.DetailedHTMLProps<
@@ -14,7 +15,14 @@ type A = React.DetailedHTMLProps<
 type InputSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export const Input: React.FC<IInputProps> = (props) => {
-  const { style, className, size = 'md', icon, ...rest } = props;
+  const {
+    style,
+    className,
+    size = 'md',
+    icon,
+    hover = 'false',
+    ...rest
+  } = props;
 
   let _style: React.CSSProperties = style || {};
 
@@ -32,7 +40,12 @@ export const Input: React.FC<IInputProps> = (props) => {
   return (
     <div className={styles.wrapper}>
       <input
-        className={cn(styles.input, `${inputSize}`, className)}
+        className={cn(
+          styles.input,
+          `${inputSize}`,
+          `${hover === true ? styles.hover : ''}`,
+          className
+        )}
         style={_style}
         {...rest}
       />
