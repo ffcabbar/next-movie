@@ -18,7 +18,6 @@ type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 export const Button: React.FC<IButtonProps> = (props) => {
   const {
     children = 'Button',
-    style,
     className,
     size = 'md',
     variant = 'primary',
@@ -26,13 +25,6 @@ export const Button: React.FC<IButtonProps> = (props) => {
     rightIcon,
     ...rest
   } = props;
-
-  let _style: React.CSSProperties = style || {};
-
-  /* Override Defaults */
-  // if (color && _style) {
-  //   _style.color = color;
-  // }
 
   let buttonSize;
   if (size === 'xs') {
@@ -64,7 +56,6 @@ export const Button: React.FC<IButtonProps> = (props) => {
         `${buttonVariant}`,
         className
       )}
-      style={_style}
       {...rest}
     >
       {leftIcon && <span>{leftIcon}</span>}

@@ -15,16 +15,7 @@ type A = React.DetailedHTMLProps<
 type InputSize = 'xs' | 'sm' | 'md' | 'lg';
 
 export const Input: React.FC<IInputProps> = (props) => {
-  const {
-    style,
-    className,
-    size = 'md',
-    icon,
-    hover = 'false',
-    ...rest
-  } = props;
-
-  let _style: React.CSSProperties = style || {};
+  const { className, size = 'md', icon, hover = 'false', ...rest } = props;
 
   let inputSize;
   if (size === 'xs') {
@@ -46,7 +37,6 @@ export const Input: React.FC<IInputProps> = (props) => {
           `${hover === true ? styles.hover : ''}`,
           className
         )}
-        style={_style}
         {...rest}
       />
       {icon && <span>{icon}</span>}
