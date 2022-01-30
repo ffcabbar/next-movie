@@ -1,0 +1,48 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--color-white);
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0px 5px 0px 24px;
+
+    div {
+      &:nth-child(1) {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.nav {
+  margin-left: 80px;
+  ul {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    font-weight: 600;
+    color: var(--color-black);
+    font-size: 1.125rem;
+    cursor: pointer;
+
+    li {
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+      &:hover {
+        transform: translateY(-2px);
+        opacity: 0.8;
+      }
+    }
+
+    .active {
+      color: var(--color-primary);
+    }
+  }
+}
