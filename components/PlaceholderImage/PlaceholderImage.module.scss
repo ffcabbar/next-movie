@@ -1,0 +1,60 @@
+.container {
+  background-image: linear-gradient(rgba(245, 197, 24, 0.8)), url(/image1.png);
+  background-position: 50% 0%;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+
+  .innerSection {
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 0px 24px;
+    position: relative;
+    .imagePoints {
+      position: absolute;
+      top: 4px;
+      left: 29px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.title {
+  width: 25%;
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+}
+
+.description {
+  width: 50%;
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    width: 40%;
+  }
+  .description {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .title {
+    width: 70%;
+  }
+  .description {
+    width: 80%;
+  }
+}
